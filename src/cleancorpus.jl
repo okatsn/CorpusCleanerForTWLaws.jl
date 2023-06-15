@@ -20,17 +20,17 @@ function replacex(content, prs...; kwargs...)
 end
 
 
-function clean!(cp::CorpusJudicalYuan)
-    cp.question = replace(cp.question, expr_qncolon => "")
-    answer = replacex(cp.answer,
+function clean!(cp1::CorpusJudicalYuan)
+    cp1.question = replace(cp1.question, expr_qncolon => "")
+    answer = replacex(cp1.answer,
         r"\r" => "", # remove all carridge return
         expr_tab => "",
         "▍" => "",
-        Regex(cp.question) => "",
+        Regex(cp1.question) => "",
         expr_manylnbr => "",
         expr_1stlnbr => "",
         expr_endlnbr => ""
     )
-    cp.answer = answer
+    cp1.answer = answer
 
 end

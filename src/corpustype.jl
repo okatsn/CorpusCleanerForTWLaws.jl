@@ -16,4 +16,4 @@ struct CorpusFormal <: CorpusType
     output
 end
 
-CorpusFormal(cp::CorpusJudicalYuan) = CorpusFormal(cp.question, "", cp.answer)
+CorpusFormal(cp1::CorpusJudicalYuan) = CorpusFormal(cp1.question, "", cp1.answer)
