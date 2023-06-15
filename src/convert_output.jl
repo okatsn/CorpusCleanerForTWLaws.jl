@@ -6,11 +6,3 @@ function CorpusCleanerForTWLaws.Dict(c::CorpusType)
     end
     return d
 end
-
-struct CorpusFormal <: CorpusType
-    instruction
-    input
-    output
-end
-
-CorpusFormal(cp::CorpusJudicalYuan) = CorpusFormal(cp.question, "", cp.answer)
