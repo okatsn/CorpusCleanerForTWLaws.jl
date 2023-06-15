@@ -25,6 +25,7 @@ function clean!(cp::CorpusJudicalYuan)
     answer = replacex(cp.answer,
         r"\r" => "", # remove all carridge return
         expr_tab => "",
+        "▍" => "",
         Regex(cp.question) => "",
         expr_manylnbr => "",
         expr_1stlnbr => "",
