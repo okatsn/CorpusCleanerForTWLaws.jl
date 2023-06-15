@@ -6,3 +6,9 @@ function CorpusCleanerForTWLaws.Dict(c::CorpusType)
     end
     return d
 end
+
+formaldict(cp::CorpusType) = Dict(CorpusFormal(cp))
+
+CorpusCleanerForTWLaws.print(io::IO, cps::Vector{<:CorpusType}) = JSON.print(io, formaldict.(cps))
+
+CorpusCleanerForTWLaws.print(io::IO, cp::CorpusType) = JSON.print(io, formaldict(cp))
