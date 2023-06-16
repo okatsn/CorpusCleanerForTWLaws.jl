@@ -11,6 +11,7 @@ expr_endlnbr = r"(\n|\r)+\Z"
 `replacex(content, p...::Pair)` replace `content` with pairs of strings.
 Currently, `replace` supports only one string substitution (i.e., `replace(c, "hello" => "world")`)
 
+The key difference between `replacex(content, p...::Pair)` and `replace(content, p...::Pair)` is that `replace` executes `replace` in order.
 """
 function replacex(content, prs...; kwargs...)
     for p in prs
@@ -19,7 +20,9 @@ function replacex(content, prs...; kwargs...)
     return content
 end
 
-
+"""
+`clean!(cp1::CorpusJudicalYuan)` clean corpus of `CorpusType` `CorpusJudicalYuan`.
+"""
 function clean!(cp1::CorpusJudicalYuan)
     cp1.question = replace(cp1.question, expr_qncolon => "")
     answer = replacex(cp1.answer,
