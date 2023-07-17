@@ -12,3 +12,5 @@
 This is a julia package created using `okatsn`'s preference, and this package is expected to be registered to [okatsn/OkRegistry](https://github.com/okatsn/OkRegistry) for CIs to work properly.
 
 This package is create on 2023-06-14.
+
+[Documentation](https://okatsn.github.io/CorpusCleanerForTWLaws.jl/dev/)
