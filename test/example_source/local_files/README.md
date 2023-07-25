@@ -1,1 +1,1 @@
-Put as many JSON files
+Put JSON files to be tested as many as you like in this directory since `**_files` is going to be `.gitignore`d.
